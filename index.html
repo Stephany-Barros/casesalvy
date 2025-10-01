@@ -65,24 +65,22 @@
 
         h2, h3 {
             color: var(--cor-titulo);
-            /* Removido border-bottom para um visual mais clean e leve */
             padding-bottom: 8px;
             margin-top: 25px;
             margin-bottom: 15px;
             font-size: 1.6em;
-            display: flex; /* Para alinhar o ícone e o texto */
+            display: flex; 
             align-items: center;
-            gap: 12px; /* Espaçamento entre o ícone e o texto */
+            gap: 12px; 
         }
         h3 {
             font-size: 1.3em;
             border-bottom: none;
         }
         
-        /* Estilo para ícones nos títulos h2 e h3 */
         h2 .fas, h3 .fas {
             color: var(--cor-acento);
-            font-size: 0.9em; /* Ícones um pouco menores que o título */
+            font-size: 0.9em; 
         }
 
         strong {
@@ -95,41 +93,38 @@
             padding-left: 20px;
         }
         
-        /* Estilo para Tabela (Topo Escuro, Miolo Branco) */
+        /* Estilos de Tabela (Mantidos limpos) */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
             border-radius: 12px; 
             overflow: hidden; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra mais leve */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
         }
 
         th, td {
             padding: 15px;
             text-align: left;
-            border-bottom: 1px solid #F0F0F0; /* Linha de separação mais clara */
+            border-bottom: 1px solid #F0F0F0; 
         }
 
         th {
-            background-color: var(--cor-acento); /* Cinza Escuro */
+            background-color: var(--cor-acento); 
             color: #FFFFFF; 
             font-weight: bold;
         }
         
-        /* Fundo Branco para o miolo das tabelas */
         .plano-acao-tabela td {
             background-color: #FFFFFF; 
         }
         
-        /* Fundo ligeiramente off-white para linhas pares de tabelas genéricas, mantendo o clean */
         table tbody tr:nth-child(even) {
              background-color: #F9F9F9; 
         }
         table tbody tr:nth-child(odd) {
              background-color: #FFFFFF; 
         }
-
 
         .teses {
             font-style: italic;
@@ -141,47 +136,129 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); 
         }
 
-        /* NOVO ESTILO PARA VISUAL ARTEFACT: Fundo Branco, Borda Escura, Texto Escuro */
+        /* Estilo do Botão Chat Flutuante */
+        #salvy-chat-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--cor-acento);
+            color: #FFFFFF;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        
+        /* NOVO ESTILO PARA O CHAT MOCKUP */
+        .chat-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background-color: #f7f7f7; 
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            z-index: 1001;
+            display: none; /* Inicia oculto */
+            flex-direction: column;
+            overflow: hidden;
+            font-size: 14px;
+        }
+        
+        .chat-header {
+            background-color: var(--cor-acento);
+            color: #FFFFFF;
+            padding: 15px;
+            font-weight: bold;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-header .close-btn {
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        
+        .chat-messages {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #FFFFFF; 
+        }
+        
+        .message-bot {
+            background-color: #EEEEEE; 
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            align-self: flex-start;
+        }
+        
+        .message-user {
+            background-color: #D3E0F3; 
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            align-self: flex-end;
+            margin-left: auto;
+            text-align: right;
+        }
+        
+        .chat-options button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 8px;
+            background-color: var(--cor-acento);
+            color: #FFFFFF;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.2s;
+        }
+        
+        .chat-options button:hover {
+            background-color: #1A1A1A;
+        }
+        
+        .chat-options {
+            padding: 15px;
+            border-top: 1px solid #E0E0E0;
+            background-color: #FFFFFF;
+        }
+
+        /* Estilos de Ícones (Mantidos) */
         .visual-artefact {
             margin-top: 20px;
             padding: 30px;
-            border: 2px solid var(--cor-acento); /* Borda cinza escuro */
+            border: 2px solid var(--cor-acento); 
             border-radius: var(--radius);
             text-align: center;
-            background-color: #FFFFFF; /* Fundo branco */
-            color: var(--cor-texto-principal); /* Texto cinza escuro */
+            background-color: #FFFFFF; 
+            color: var(--cor-texto-principal); 
             font-weight: bold;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .artefact-icon {
-            font-size: 2.2em; /* Ícone um pouco maior */
-            color: var(--cor-acento); /* Ícone cinza escuro */
+            font-size: 2.2em;
+            color: var(--cor-acento);
         }
         
-        .conclusao {
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-            background-color: #FFFFFF; 
-            border-radius: var(--radius); 
-            font-weight: bold;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-        }
-
-        .chat-mention {
-            margin-top: 10px;
-            padding: 10px;
-            font-style: italic;
-            font-size: 0.9em;
-            text-align: center;
-            color: #666;
-        }
-
-        /* Estilo para os ícones nas células do plano de ação */
         .plano-acao-tabela .foco-icon {
             color: var(--cor-acento);
             margin-right: 8px;
@@ -196,82 +273,22 @@
     <img src="https://optim.tildacdn.one/tild3936-3731-4031-b834-636361363366/-/resize/168x/-/format/webp/salvy-telefonia-para.png.webp" alt="Logo da Salvy" class="logo">
 
     <div class="section-block">
-        <h1>CX como Acelerador de Crescimento: Um Plano Ágil para Escalar com Qualidade</h1>
+        <h1>CX como Nosso Acelerador de Crescimento: Um Plano Ágil para Escalar com Qualidade</h1>
 
-        <h2><i class="fas fa-eye"></i> Visão e Contexto</h2>
-        <p>Olá! É um prazer discutir como podemos juntos transformar o CX da Salvy. Atualmente, a empresa enfrenta um crescimento exponecial, mas com desafios operacionais:</p>
-        <ul>
-            <li>A Taxa de Contato (CR) subiu de 0,050 para 0,068, e nosso Tempo de Resolução (TTR) saltou para 67 horas.</li>
-            <li>O salto nos indicadores sinaliza um risco de sustentabilidade: a ineficiência do processo pode consumir os recursos internos de Engenharia e Produto, ameaçando o crescimento futuro. Precisamos proteger esses ativos.</li>
-        </ul>
-
+        <h2><i class="fas fa-eye"></i> Nossa Visão e Contexto</h2>
         <div class="teses">
-            <strong>Tese Central:</strong> O desafio não é o volume de clientes, mas sim a otimização da ineficiência do processo e a aplicação de automação focada. Vamos transformar o CX em um centro de inteligência preditiva e deflexão estratégica.
+            <strong>Nossa Tese Central:</strong> O desafio não é o volume de clientes, mas sim a otimização da ineficiência do processo e a aplicação de automação focada. Vamos transformar o CX em um centro de inteligência preditiva e deflexão estratégica.
         </div>
         <div class="separator"></div>
     </div>
 
     <div class="section-block">
         <h2><i class="fas fa-search-chart"></i> Diagnóstico: Os 3 Sinais de Alerta Operacional</h2>
-
-        <h3><i class="fas fa-chart-area"></i> 1. Crise de Escalabilidade: O Alto Custo do Contato</h3>
-        <ul>
-            <li>Nossa operação está gerando 0,068 tickets para cada linha (1.100 tickets / 16.000 linhas).</li>
-            <li>Se o custo de atendimento por cliente continuar alto, o crescimento da base de linhas será economicamente insustentável.</li>
-        </ul>
-
-        <h3><i class="fas fa-cogs"></i> 2. Crise de Qualidade: CSAT e TTR Em Desalinho</h3>
-        <ul>
-            <li>O TTR saltou de 17h para 67h, e o CSAT despencou de 99% para 87%. Isso é um sinal de alarme.</li>
-            <li>A causa provável é o aumento expressivo dos Tickets N3 (escalados, de 15 em Janeiro para 55 em Março), o que gera gargalo e atrasa drasticamente as resoluções.</li>
-        </ul>
-
-        <h3><i class="fas fa-user-friends"></i> 3. Personalização CX: A Oportunidade da Triagem por Jornada</h3>
-        <ul>
-            <li>A ineficiência atual pode ser resolvida com o alinhamento da tecnologia para gerenciar a complexidade B2B. A solução é Segmentar o CX por Perfil: criando uma jornada distinta para o **Gestor** (focada em resolução e rapidez) e para o **Funcionário** (focada em autoatendimento e deflexão).</li>
-        </ul>
         <div class="separator"></div>
     </div>
 
     <div class="section-block">
         <h2><i class="fas fa-clipboard-question"></i> Perguntas Chave e Painel de Resultados</h2>
-
-        <h3><i class="fas fa-question-circle"></i> O que Precisamos Saber Agora?</h3>
-        <ul>
-            <li>Foco em Produto: "Quais são os Top 5 motivos de contato que impulsionaram o salto de Tickets N3 a partir de Março? Qual problema recorrente o time de Produto pode **eliminar**?"</li>
-            <li>Foco em Processo: "Quais são os Top 5 motivos de contato nos Níveis N1 e N2? O que falta aos agentes (conhecimento ou ferramenta) para resolverem esses volumes sem atrasar o TTR?"</li>
-            <li>Foco em Inteligência (IA + Automação): "O sistema Atlas.so está sendo subutilizado? Há processos manuais no dia a dia da operação que impactam o TTR? Temos interesse em migrar ou ampliar os canais de atendimento? Qual canal apresenta maior volume?"</li>
-            <li>Foco em Qualidade e Dados: "Estamos realizando auditoria dos atendimentos? Como podemos incluir a Inteligência Artificial neste processo?"</li>
-        </ul>
-
-        <h3><i class="fas fa-chart-line"></i> Novas Métricas Essenciais (O Painel do Líder)</h3>
-        <p>Para medir a saúde e a escalabilidade, propomos focar em três indicadores chave:</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Métrica</th>
-                    <th>O que Acompanha</th>
-                    <th>Por que é Crítica para a Salvy</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1. Taxa de Contato (CR)</td>
-                    <td>Tickets / Quantidade de Linhas</td>
-                    <td>Métrica de Escalabilidade. Se cair, o CX está mais eficiente.</td>
-                </tr>
-                <tr>
-                    <td>2. Taxa de Deflexão (DR)</td>
-                    <td>Interações resolvidas via Autoatendimento / Total de interações</td>
-                    <td>Mede o sucesso da Automação de Nível 1 (reduz TTR e custo).</td>
-                </tr>
-                <tr>
-                    <td>3. Resolução no Primeiro Contato (FCR)</td>
-                    <td>Tickets Resolvidos na 1ª Interação / Total de Tickets</td>
-                    <td>Ataca diretamente o alto TTR e garante a satisfação imediata do cliente.</td>
-                </tr>
-            </tbody>
-        </table>
         <div class="separator"></div>
     </div>
 
@@ -290,12 +307,12 @@
             <tbody>
                 <tr>
                     <td><i class="fas fa-robot foco-icon"></i> Deflexão Inteligente (N1)</td>
-                    <td>Implementação de Chatbot MVP no canal de maior volume (a ser definido). Automatizando a resolução dos Top 3 de Fricção (Portabilidade, Código WhatsApp e Ativação de Sinal), baseados nos Artigos Populares.</td>
+                    <td>Implementação de **Chatbot MVP** no **canal de maior volume** (a ser definido). Usaremos o n8n para Deflexão, automatizando a resolução dos **Top 3 de Fricção (Portabilidade, Código WhatsApp e Ativação de Sinal)**, baseados nos Artigos Populares.</td>
                     <td>Aumentar Retenção / Deflexão (DR) para > 15%.</td>
                 </tr>
                 <tr>
                     <td><i class="fas fa-medal foco-icon"></i> Qualidade e FCR (N2/N3)</td>
-                    <td>Implantação do Guia de Resolução Rápida (GRR): Focar os agentes remanescentes nos Tickets N2 e N3, garantindo o FCR alto para essas interações críticas.</td>
+                    <td>Implantação do Guia de Resolução Rápida (GRR): Focar os agentes remanescentes nos **Tickets N2 e N3**, garantindo o **FCR alto** para essas interações críticas.</td>
                     <td>TTR < 48h e CSAT > 90%</td>
                 </tr>
             </tbody>
@@ -304,141 +321,111 @@
         <div class="visual-artefact">
             <span class="artefact-icon"><i class="fas fa-comment-dots"></i></span>
             <div>
-                <strong>Fluxo de Triagem B2B:</strong> Clique no botão de chat abaixo para navegar em um exemplo de como seria a triagem de **Gestor vs. Funcionário** e a deflexão de Nível 1.
+                <strong>Fluxo de Triagem B2B (Protótipo):</strong> Clique no botão de chat abaixo para **simular** como seria a triagem de **Gestor vs. Funcionário** e a deflexão de Nível 1.
             </div>
         </div>
         
-        <div class="chat-mention">
-             (Este botão simula a jornada inicial de triagem. Ele busca imediatamente separar o Gestor do Funcionário, conforme a tese central, e encaminha para as respostas mais rápidas no chatbot.)
-        </div>
-
-        <h3><i class="fas fa-chart-bar"></i> 2. Médio Prazo (4-6 Meses): Consolidação e Eliminação de N3</h3>
-        <table class="plano-acao-tabela">
-            <thead>
-                <tr>
-                    <th>Foco Estratégico</th>
-                    <th>Ação Tática Detalhada</th>
-                    <th>KPI de Sucesso (Target)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><i class="fas fa-brain foco-icon"></i> Automação + IA de Segunda Geração</td>
-                    <td>Implementação de Agentes de IA para atendimentos mais complexos: Incluir integrações com CRM e personalização para automatizar 50% dos tickets de Média Complexidade.</td>
-                    <td>Redução de 20% nos Tickets N2/N3.</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-check-circle foco-icon"></i> Excelência Operacional</td>
-                    <td>Implementação do Ciclo de Monitorias de Qualidade: Criar fichas de monitoria e implementar o ciclo de calibração. Inclusão de IA para auditoria de 100% dos atendimentos, focando em temas sensíveis.</td>
-                    <td>CSAT > 95% e TTR < 48h</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-book-open foco-icon"></i> Sustentabilidade do Autoatendimento</td>
-                    <td>Revisão Periódica da Central de Ajuda: Implementar um ciclo de revisão ou trimestral obrigatória dos Top 10 artigos para garantir que a documentação esteja sempre **atualizada** e **coerente** com o produto.</td>
-                    <td>Aumento na Taxa de Consumo do Help Center (views/semana).</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3><i class="fas fa-long-arrow-alt-right"></i> 3. Longo Prazo (1 Ano): Parceria Estratégica e Escala Rentável</h3>
-        <table class="plano-acao-tabela">
-            <thead>
-                <tr>
-                    <th>Foco Estratégico</th>
-                    <th>Ação Tática Detalhada</th>
-                    <th>KPI de Sucesso (Target)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><i class="fas fa-handshake foco-icon"></i> Alinhamento Produto/CX</td>
-                    <td>Estruturação do Feedback Loop: Criar um processo mensal ou por quarter para transformar os Top 3 motivos de contato em sprints de **eliminação da causa raiz** junto aos times de Produto.</td>
-                    <td>Taxa de Contato (CR) < 0,034</td>
-                </tr>
-                <tr>
-                    <td><i class="fas fa-users-gear foco-icon"></i> Escala e Competência</td>
-                    <td>Desenvolvimento do Time e PDI: Implementar o Plano de Desenvolvimento Individual (PDI) da equipe, garantindo a formação de novos líderes/especialistas.</td>
-                    <td>Custo de Suporte por Linha (CSL) em declínio.</td>
-                </tr>
-            </tbody>
-        </table>
-
         <div class="conclusao">
-            "Minha proposta é transformar o CX na vantagem competitiva da Salvy. Juntos, usaremos inteligência de dados, processos enxutos e automação para garantir um crescimento que é não apenas rápido, mas também saudável e rentável."
+            "Nossa proposta é transformar o CX na vantagem competitiva da Salvy. Juntos, usaremos inteligência de dados, processos enxutos e automação agressiva para garantir um crescimento que é não apenas rápido, mas também saudável e rentável."
         </div>
     </div>
 
 </div>
 
+<div id="salvy-chat-button">
+    Iniciar Chat Salvy (PoC)
+</div>
+
+<div class="chat-container" id="chat-mockup">
+    <div class="chat-header">
+        Chat Salvy <i class="fas fa-robot"></i>
+        <span class="close-btn" onclick="closeChat()"><i class="fas fa-times"></i></span>
+    </div>
+    
+    <div class="chat-messages" id="chat-messages">
+        <div class="message-bot">
+            Olá! Eu sou o Bot de Triagem da Salvy. Para agilizar o seu atendimento, por favor, me diga: Qual é o seu perfil de usuário?
+        </div>
+    </div>
+    
+    <div class="chat-options" id="chat-options">
+        <button onclick="selectOption('gestor')">1. Sou Gestor de Contrato</button>
+        <button onclick="selectOption('funcionario')">2. Sou um Funcionário</button>
+    </div>
+    
+    <div id="gestor-messages" style="display: none;">
+        <div class="message-bot">
+            Perfeito, Gestor. Sua demanda geralmente é mais complexa. Vamos agilizar sua conexão com um agente ou com o autoatendimento específico para: <br><br> (1) Problemas de Fatura (2) Portabilidade (3) Solicitações de Linhas.
+        </div>
+        <div class="message-bot" style="font-style: italic; font-size: 0.9em;">
+             (A simulação para Gestores terminaria aqui, encaminhando para o time N2 ou para a Central de Ajuda com credenciais de Gestor)
+        </div>
+    </div>
+    
+    <div id="funcionario-messages" style="display: none;">
+        <div class="message-bot">
+            Obrigado, Funcionário! Nossos Top 3 motivos de contato são: (1) Ativação/Sinal (2) Código WhatsApp (3) Consulta de Saldo. <br><br> Por favor, digite o número do seu problema e resolva agora mesmo em nossa Central de Ajuda!
+        </div>
+        <div class="message-bot" style="font-style: italic; font-size: 0.9em;">
+             (A simulação para Funcionários terminaria aqui, mostrando que 90% das demandas seriam resolvidas via deflexão/autoatendimento, atingindo a meta de 15% de deflexão)
+        </div>
+    </div>
+    
+</div>
+
 <script>
-    /* Botão Flutuante de Chat e Integração com n8n (Mantido como Artefato Visual) */
-
-    // 1. DEFINA A URL DO SEU WEBHOOK N8N AQUI
-    const N8N_WEBHOOK_URL = 'https://guirompava.app.n8n.cloud/webhook-test/3a4a761b-2059-4c69-9ef1-3c4e2c645145'; 
-
-    function startChat() {
-        console.log('Iniciando Chat com o n8n...');
-        
-        const initialPayload = {
-            event: 'chat_start',
-            timestamp: new Date().toISOString()
-        };
-
-        fetch(N8N_WEBHOOK_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(initialPayload),
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log('Payload inicial enviado com sucesso para o n8n.');
-                alert('🚀 Fluxo de Triagem B2B (via n8n) iniciado com sucesso! \n\nVocê seria questionado se é Gestor ou Funcionário, e o fluxo guiaria você para a resposta mais rápida. \n\nNo ambiente real, a conversa continuaria aqui.');
-            } else {
-                console.error('Falha ao enviar payload para o n8n.', response.statusText);
-                alert('❌ Erro ao iniciar o chat. Verifique a URL do Webhook no n8n.');
-            }
-        })
-        .catch(error => {
-            console.error('Erro de rede:', error);
-            alert('❌ Erro de conexão ao iniciar o chat. Verifique sua conexão.');
-        });
+    function openChat() {
+        document.getElementById('chat-mockup').style.display = 'flex';
+        document.getElementById('salvy-chat-button').style.display = 'none';
     }
 
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const chatButton = document.createElement('div');
-        chatButton.id = 'salvy-chat-button';
-        chatButton.innerHTML = 'Chat Salvy'; 
+    function closeChat() {
+        document.getElementById('chat-mockup').style.display = 'none';
+        document.getElementById('salvy-chat-button').style.display = 'block';
         
-        // Estilos para o botão flutuante (Cinza Escuro/Estilo Salvy)
-        chatButton.style.cssText = `
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--cor-acento); /* #333333 */
-            color: #FFFFFF; /* Branco puro */
-            padding: 15px 25px;
-            border-radius: 8px; 
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-            z-index: 1000;
-            transition: background-color 0.3s, transform 0.1s;
+        // Resetar o chat para a próxima abertura
+        const messagesDiv = document.getElementById('chat-messages');
+        const defaultMessage = `
+            <div class="message-bot">
+                Olá! Eu sou o Bot de Triagem da Salvy. Para agilizar o seu atendimento, por favor, me diga: Qual é o seu perfil de usuário?
+            </div>
         `;
-
-        // Efeitos de Hover e Clique 
-        chatButton.onmouseover = () => chatButton.style.backgroundColor = '#1A1A1A';
-        chatButton.onmouseout = () => chatButton.style.backgroundColor = 'var(--cor-acento)';
-        chatButton.onmousedown = () => chatButton.style.transform = 'scale(0.98)';
-        chatButton.onmouseup = () => chatButton.style.transform = 'scale(1)';
+        messagesDiv.innerHTML = defaultMessage;
         
-        chatButton.onclick = startChat;
+        document.getElementById('chat-options').style.display = 'block';
+    }
 
-        document.body.appendChild(chatButton);
-    });
+    function selectOption(option) {
+        const messagesDiv = document.getElementById('chat-messages');
+        const optionsDiv = document.getElementById('chat-options');
+        
+        let userMessageText = (option === 'gestor') ? '1. Sou Gestor de Contrato' : '2. Sou um Funcionário';
+        
+        // 1. Adiciona a resposta do Usuário
+        const userMessage = document.createElement('div');
+        userMessage.className = 'message-user';
+        userMessage.textContent = userMessageText;
+        messagesDiv.appendChild(userMessage);
+        
+        // 2. Oculta as opções de botão
+        optionsDiv.style.display = 'none';
+
+        // 3. Adiciona a resposta do Bot
+        const botResponses = document.getElementById(option + '-messages').innerHTML;
+        
+        const botResponsesDiv = document.createElement('div');
+        botResponsesDiv.innerHTML = botResponses;
+        
+        // Adiciona as mensagens de resposta do bot uma por uma
+        Array.from(botResponsesDiv.children).forEach(msg => {
+            messagesDiv.appendChild(msg);
+        });
+
+        // 4. Scrolla para o final da conversa
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    document.getElementById('salvy-chat-button').onclick = openChat;
 </script>
 
 </body>
